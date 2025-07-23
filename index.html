@@ -1,18 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to My Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      padding: 40px 20px;
       text-align: center;
-      padding: 50px;
+    }
+
+    header {
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      color: white;
+    }
+
+    header img {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #3e8e41;
+    }
+
+    .about {
+      background-color: white;
+    }
+
+    .gallery {
+      background-color: #fafafa;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input[type="submit"] {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0b7dda;
+    }
+
+    footer {
+      background-color: #222;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is the homepage you see after scanning the QR code.</p>
+
+  <!-- HEADER -->
+  <header>
+    <img src="https://via.placeholder.com/100" alt="Logo" />
+    <h1>Welcome to My Website</h1>
+    <p>This is a custom homepage linked with a QR code.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>This project demonstrates how to build a simple but beautiful website using only HTML and CSS. It’s ideal for students, portfolios, or quick landing pages accessed via QR code.</p>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <img src="https://via.placeholder.com/200x150" alt="Gallery Image 1" />
+    <img src="https://via.placeholder.com/200x150" alt="Gallery Image 2" />
+    <img src="https://via.placeholder.com/200x150" alt="Gallery Image 3" />
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
+    <p style="font-size: 0.9rem; margin-top: 10px;">We'll get back to you within 24 hours.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 My Website. All rights reserved.
+  </footer>
+
 </body>
 </html>
